@@ -1,6 +1,6 @@
 import json
 from qdrant_client import QdrantClient
-from qdrant_client.models import PointStruct, Distance
+from qdrant_client.models import PointStruct, Distance, VectorParams
 
 class QdrantHandler:
     """
@@ -21,8 +21,7 @@ class QdrantHandler:
         self.qdrant_client = QdrantClient(url=config.get("url"), api_key=config.get("api_key"))
         self.qdrant_client.recreate_collection(
             collection_name=self.collection_name,
-            vector_size=config.get("vector_size"),
-            distance=Distance.COSINE
+            vectors_config=VectorParams(size=config.get("vector_size"), distance=Distance.COSINE)
         )
     
     def store_embedding(self, embedding, metadata=None):
