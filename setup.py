@@ -8,12 +8,12 @@ setup(
     url="https://github.com/Anto-Nobel/clipmvs",
     packages=find_packages(),
     install_requires=[
-        "transformers==4.39.3",
+        "transformers",
         "qdrant-client",
         "opencv-python",
         "Pillow",
         "matplotlib",
-        "protobuf==3.19.0"
+        "protobuf"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
