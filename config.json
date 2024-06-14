@@ -1,0 +1,6 @@
+{
+    "url": "your url",
+    "api_key": "your api key",
+    "collection_name": "clip_embeddings",
+    "vector_size": 512
+}
