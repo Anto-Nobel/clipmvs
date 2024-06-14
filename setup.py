@@ -8,7 +8,6 @@ setup(
     url="https://github.com/Anto-Nobel/clipmvs",
     packages=find_packages(),
     install_requires=[
-        "torch>=1.9.0,<=2.0.0",
         "transformers==4.39.3",
         "qdrant-client",
         "opencv-python",
