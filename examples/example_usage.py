@@ -1,6 +1,6 @@
 import os
 from concurrent.futures import ThreadPoolExecutor
-from clip_video_processor import VideoDataLoader, CLIPEmbeddingRetriever, QdrantHandler
+from clipmvs import VideoDataLoader, CLIPEmbeddingRetriever, QdrantHandler
 from PIL import Image
 
 def process_video(video_path, retriever, qdrant_handler, batch_size=5, interval=10):
